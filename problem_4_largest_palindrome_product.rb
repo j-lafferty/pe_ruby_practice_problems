@@ -2,15 +2,15 @@
 
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
-def largest_palindrome_product(num)
+def largest_palindrome_product(num1, num2)
   palindrome = []
 
-  [*100..num].combination(2).to_a.select do |pair|
+  [*num1..num2].combination(2).to_a.select do |pair|
     product = pair.inject(:*)
-    palindrome << product if product.to_s == product.to_s.reverse
+    palindrome << product if product == product.to_s.reverse.to_i
   end
 
-  p palindrome.uniq.max
+  palindrome.uniq.max
 end
 
-p largest_palindrome_product(999) == 906609
+p largest_palindrome_product(100, 999) == 906609
