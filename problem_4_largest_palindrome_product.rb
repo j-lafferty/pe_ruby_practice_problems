@@ -4,8 +4,9 @@
 
 palindrome = []
 
-[*100..999].combination(2).to_a.select do |pair| 
-  palindrome << pair.inject(:*) if pair.inject(:*).to_s == pair.inject(:*).to_s.reverse
+[*100..999].combination(2).to_a.select do |pair|
+  product = pair.inject(:*)
+  palindrome << product if product.to_s == product.to_s.reverse
 end
 
 p palindrome.uniq.max
