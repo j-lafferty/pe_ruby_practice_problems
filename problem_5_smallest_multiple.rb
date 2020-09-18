@@ -3,13 +3,7 @@
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 def smallest_multiple(max_num)
-  smallest_multiple = 1
-
-  until [*1..max_num].all? { |i| smallest_multiple % i == 0 }
-    smallest_multiple += 1
-  end
-
-  smallest_multiple
+  (1..max_num).reduce(:lcm)
 end
 
 p smallest_multiple(10) == 2520
