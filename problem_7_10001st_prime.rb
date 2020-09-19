@@ -3,9 +3,9 @@
 # What is the 10 001st prime number?
 
 def is_prime(n)
-  return n == 2 if n % 2 == 0 # multiples of 2 are not prime
-  return n == 3 if n % 3 == 0 # multiples of 3 are not prime
-  return n == 5 if n % 5 == 0 # multiples of 5 are not prime
+  return n == 2 if n % 2 == 0
+  return n == 3 if n % 3 == 0
+  return n == 5 if n % 5 == 0
 
   step, m = 4, Math.sqrt(n) + 1
   counter = 5
