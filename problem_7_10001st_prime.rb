@@ -5,18 +5,11 @@
 require 'prime'
 
 def nth_prime(n)
-  candidate = 2
-  counter = 0
-
-  while counter < n
-    counter += 1 if candidate.prime?
-    candidate += 1
-  end
-  candidate - 1
+  (Prime.first n).last
 end
 
-p nth_prime(6) == 13
-p nth_prime(168) == 997
-p nth_prime(351) == 2371
-p nth_prime(1000) == 7919
+# p nth_prime(6) == 13
+# p nth_prime(168) == 997
+# p nth_prime(351) == 2371
+# p nth_prime(1000) == 7919
 p nth_prime(10001) == 104743
