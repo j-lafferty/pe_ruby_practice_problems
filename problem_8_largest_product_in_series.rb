@@ -24,13 +24,13 @@ number_sequence =
 
 # Find the thirteen adjacent digits in the 1000-digit number that have the greatest product. What is the value of this product?
 
-def largest_product_in_series(num_seq, group_length)
+def largest_product_in_series(num_seq, series_length)
   num_seq.gsub(/\s/, '')
          .to_i
          .digits
          .reverse
-         .each_cons(group_length)
-         .map { |group| group.reduce(:*) }
+         .each_cons(series_length)
+         .map { |series| series.reduce(:*) }
          .max
 end
 
