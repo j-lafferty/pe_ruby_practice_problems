@@ -22,15 +22,15 @@ def is_prime(n)
 end
 
 def nth_prime(n)
-  candidate = 2
+  p_contender = 2
   counter = 0
 
   while counter < n
-    counter += 1 if is_prime(candidate)
-    candidate += 1
+    counter += 1 if is_prime(p_contender)
+    p_contender += 1
   end
 
-  candidate - 1
+  p_contender - 1
 end
 
 p nth_prime(6) == 13
