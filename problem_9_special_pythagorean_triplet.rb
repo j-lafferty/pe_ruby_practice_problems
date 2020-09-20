@@ -19,10 +19,7 @@ def pythagorean_triplets
 end
 
 def take_pythagorean_triplets(sum)
-  pythagorean_triplets.take_while { |*, z| z < sum / 2 }
-                      .force
-                      .select { |i| i.sum == sum }
-                      .flatten
+  pythagorean_triplets.find { |i| i.sum == sum }.flatten
 end
 
 def pythagorean_triplets_product(sum)
